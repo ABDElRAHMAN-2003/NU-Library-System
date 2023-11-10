@@ -26,14 +26,14 @@ public class LibraryGUI extends Application {
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Library System");
-        Image icon = new Image(getClass().getResource("/icon.png").toExternalForm());
+        Image icon = new Image("/icon.png");
         primaryStage.getIcons().add(icon);
 
 
         // ---------------------------------------------------------------------------------------------- //
         // Capacity Window //
 
-        Background background = new Background(new BackgroundImage(new Image(getClass().getResource("/bg.png").toExternalForm()), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, BackgroundSize.DEFAULT));
+        Background background = new Background(new BackgroundImage(new Image("/bg.png"), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, BackgroundSize.DEFAULT));
 
         Label capacityLabel = new Label("Enter the capacity of the library:   ");
         TextField capacityField = new TextField();
@@ -70,7 +70,7 @@ public class LibraryGUI extends Application {
         // ---------------------------------------------------------------------------------------------- //
         // Main Menu Window :
 
-        Background buttonsBackground = new Background(new BackgroundImage(new Image(getClass().getResource("/ButtonsBg.png").toExternalForm()),
+        Background buttonsBackground = new Background(new BackgroundImage(new Image("/ButtonsBg.png"),
                                                                             BackgroundRepeat.NO_REPEAT,
                                                                             BackgroundRepeat.NO_REPEAT, 
                                                                             BackgroundPosition.CENTER, 
@@ -275,7 +275,7 @@ public class LibraryGUI extends Application {
 
         // ---------------------------------------------------------------------------------------------- //
         // View Library Status Window
-        Background backgroundStatus = new Background(new BackgroundImage(new Image(getClass().getResource("/statusScene.png").toExternalForm()), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, BackgroundSize.DEFAULT));
+        Background backgroundStatus = new Background(new BackgroundImage(new Image("/statusScene.png"), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, BackgroundSize.DEFAULT));
 
         Label statusLabel = new Label("Library Status:");
         TextArea statusTextArea = new TextArea();
