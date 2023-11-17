@@ -30,14 +30,33 @@ public class Login_Controller {
     private TextField phoneField;
 
     @FXML
-    private void handleLogin(ActionEvent event) {
+    private void mainPage(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("mainpage.fxml"));
+        Parent root = loader.load();
+
+        Scene scene = new Scene(root, 1280, 800);
+
+        Stage signUpStage = new Stage(); // Create a new stage for the signup window
+        signUpStage.setScene(scene);
+        signUpStage.setTitle(" Main Page ");
+        signUpStage.show();
+
+        // Close the login stage
+        Stage loginStage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        loginStage.close();
+        // Handle signup logic here
+    }
+    @FXML
+    private void handleLogin(ActionEvent event) throws IOException {
         String email = emailField.getText();
         String password = passwordField.getText();
 
         // Perform login validation here (check email and password)
 
-        if ("your_email".equals(email) && "your_password".equals(password)) {
+        if ("admin".equals(email) && "admin".equals(password)) {
             // messageLabel.setText("Login successful!");
+            mainPage(event);
+
             
         } else {
             messageLabel.setText("Invalid email or password. Please try again.");

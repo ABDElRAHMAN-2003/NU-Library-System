@@ -13,7 +13,7 @@
     
     <VBox spacing="5" styleClass="vbox">
         <ImageView>
-            <Image url="NUlogo.png" />
+            <Image url="NUlogo.png"/>
         </ImageView>
         <Label text="Login" styleClass="title-label"/>
         <HBox styleClass="hbox">

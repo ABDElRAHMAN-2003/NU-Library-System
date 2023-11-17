@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<GridPane fx:id="gridPane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" stylesheets="mainpage.css"
+    fx:controller="com.example.Mainpage_Controller" styleClass="background">
+
+    <VBox spacing="5" styleClass="vbox">
+
+        <HBox styleClass="hbox">
+            <VBox>
+                 <Button text="Search"/>
+                 <Button text="Profile"/>
+                 <Button text="Calender"/>
+            </VBox>
+        </HBox>
+    </VBox>
+
+</GridPane>

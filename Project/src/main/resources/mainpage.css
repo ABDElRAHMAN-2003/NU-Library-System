@@ -1,0 +1,29 @@
+/* mainpage.css */
+
+.background {
+    -fx-background-image: url('MoodleBG.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+.vbox {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-min-height: 800px;
+    -fx-pref-width: 200px;
+    -fx-alignment: TOP_CENTER; 
+}
+
+
+.button {
+    -fx-font-size: 14px;
+    -fx-pref-height: 50px;
+    -fx-pref-width: 200px;
+    -fx-background-color: rgb(246, 246, 255);
+    -fx-text-fill: #000000;
+    /* -fx-border-color: #030303; Border color */
+    -fx-border-width: 2px; 
+}
+
+.button:hover {
+    -fx-background-color: #0f336a;
+    -fx-text-fill: #f3efef;
+}
