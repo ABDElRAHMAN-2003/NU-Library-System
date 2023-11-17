@@ -42,7 +42,9 @@
 }
 
 
-
+.error-label2 {
+    -fx-text-fill: rgb(62, 72, 189);
+}
 .error-label {
     -fx-text-fill: #ff0000;
 }

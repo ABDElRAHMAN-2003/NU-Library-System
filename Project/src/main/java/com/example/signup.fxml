@@ -27,6 +27,6 @@
             </VBox>
         </HBox>
         <Button text="Sign Up" onAction="#handleSignUp"/>
-        <Label fx:id="messageLabel" text="" styleClass="error-label"/>
+        <Label fx:id="messageLabel" text="" styleClass="error-label2"/>
     </VBox>
 </GridPane>
