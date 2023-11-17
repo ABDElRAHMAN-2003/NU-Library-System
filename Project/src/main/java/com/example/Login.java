@@ -12,10 +12,7 @@ public class Login extends Application {
     public void start(Stage primaryStage) throws Exception {
 
        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
-        Scene scene = new Scene(root, 600, 400);
-        // scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
-        String CSS = this.getClass().getResource("login.css").toExternalForm();
-        scene.getStylesheets().add(CSS);
+        Scene scene = new Scene(root, 1280, 800);
         primaryStage.setTitle("Login Page");
         primaryStage.setScene(scene);
         primaryStage.show();

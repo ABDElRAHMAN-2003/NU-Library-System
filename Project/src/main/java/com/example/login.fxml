@@ -2,18 +2,33 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
 
-<GridPane fx:id="gridPane" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Login_Controller" alignment="center" hgap="10" vgap="10" stylesheets="login.css">
-    <VBox spacing="5">
+<GridPane 
+    fx:id="gridPane" 
+    xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" stylesheets="login.css"
+    fx:controller="com.example.Login_Controller" 
+    alignment="center" hgap="10" vgap="10"
+    styleClass="background">
+    
+    <VBox spacing="5" styleClass="vbox">
+        <ImageView>
+            <Image url="NUlogo.png" />
+        </ImageView>
         <Label text="Login" styleClass="title-label"/>
-        <Label text="Username:"/>
-        <TextField fx:id="usernameField" promptText="Enter your username"/>
-        <Label text="Password:"/>
-        <PasswordField fx:id="passwordField" promptText="Enter your password"/>
-        <Button text="Login" onAction="#handleLogin"/>
+        <HBox styleClass="hbox">
+            <VBox>
+                <Label text="Email:" styleClass="field-label"/>
+                <Label text="Password:" styleClass="field-label"/>
+            </VBox>
+            <VBox style="-fx-pref-width: 250px;">
+                <TextField fx:id="emailField" promptText="Enter your email" styleClass="field"/>
+                <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="field"/>
+            </VBox>
+        </HBox>
+        <Button text="Login" onAction="#handleLogin" />
         <Button text="Sign up" onAction="#handleLogin"/>
         <Button text="Forgot passwords" onAction="#handleLogin"/>
         <Label fx:id="messageLabel" text="" styleClass="error-label"/>
-        
     </VBox>
 </GridPane>

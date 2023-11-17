@@ -7,7 +7,7 @@ import javafx.scene.control.*;
 public class Login_Controller {
 
     @FXML
-    private TextField usernameField;
+    private TextField emailField;
 
     @FXML
     private PasswordField passwordField;
@@ -17,15 +17,15 @@ public class Login_Controller {
 
     @FXML
     private void handleLogin(ActionEvent event) {
-        String username = usernameField.getText();
+        String email = emailField.getText();
         String password = passwordField.getText();
 
-        // Perform login validation here (check username and password)
+        // Perform login validation here (check email and password)
 
-        if ("your_username".equals(username) && "your_password".equals(password)) {
+        if ("your_email".equals(email) && "your_password".equals(password)) {
             messageLabel.setText("Login successful!");
         } else {
-            messageLabel.setText("Invalid username or password. Please try again.");
+            messageLabel.setText("Invalid email or password. Please try again.");
         }
     }
 }
