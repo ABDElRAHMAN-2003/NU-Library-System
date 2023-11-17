@@ -1,4 +1,4 @@
-package com.example;
+package com.example.admin;
 import java.time.LocalDate;
 
 public class Book {
