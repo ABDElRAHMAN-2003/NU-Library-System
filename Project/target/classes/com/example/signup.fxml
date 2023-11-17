@@ -13,7 +13,7 @@
         <ImageView>
             <Image url="NUlogo.png" />
         </ImageView>
-        <Label text="Sign Up" styleClass="title-label"/> 
+        <Label text="Sign Up" styleClass="title-label"/>
         <HBox styleClass="hbox">
             <VBox>
                 <Label text="Email:" styleClass="field-label"/>
@@ -26,7 +26,7 @@
                 <TextField fx:id="phoneField" promptText="Enter your phone number" styleClass="field"/> 
             </VBox>
         </HBox>
-        <Button text="Sign Up" onAction="#handleSignUp"/> 
+        <Button text="Sign Up" onAction="#handleSignUp"/>
         <Label fx:id="messageLabel" text="" styleClass="error-label"/>
     </VBox>
 </GridPane>

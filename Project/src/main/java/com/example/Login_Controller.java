@@ -29,7 +29,6 @@ public class Login_Controller {
     @FXML
     private TextField phoneField;
 
-
     @FXML
     private void handleLogin(ActionEvent event) {
         String email = emailField.getText();
@@ -38,7 +37,8 @@ public class Login_Controller {
         // Perform login validation here (check email and password)
 
         if ("your_email".equals(email) && "your_password".equals(password)) {
-            messageLabel.setText("Login successful!");
+            // messageLabel.setText("Login successful!");
+            
         } else {
             messageLabel.setText("Invalid email or password. Please try again.");
         }
