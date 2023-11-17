@@ -1,0 +1,48 @@
+/* login.css */
+.background{
+    -fx-background-image: url('MoodleBG.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+.vbox {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-radius: 20px;
+    -fx-pref-height: 750px;
+    -fx-pref-width: 500px;
+    -fx-alignment: center;
+}
+
+.hbox{
+    -fx-alignment: center;
+}
+
+.title-label {
+    -fx-font-size: 30px;
+    -fx-text-fill: rgb(19, 9, 106); /* Dark blue text color */
+}
+
+.field-label{
+    -fx-font-size: 16px;
+}
+
+.field{
+    -fx-max-width: 250px;
+}
+
+.button {
+    -fx-font-size: 14px;
+    -fx-pref-height: 30px;
+    -fx-background-color: rgb(19, 9, 106);
+    -fx-text-fill: #ffffff;
+}
+
+.button:hover {
+    -fx-background-color: #001c47;
+}
+
+
+
+.error-label {
+    -fx-text-fill: #ff0000;
+}

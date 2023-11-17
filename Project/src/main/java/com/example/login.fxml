@@ -7,7 +7,7 @@
 <GridPane 
     fx:id="gridPane" 
     xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" stylesheets="login.css"
-    fx:controller="com.example.Login_Controller" 
+    fx:controller="com.example.Login_Controller"
     alignment="center" hgap="10" vgap="10"
     styleClass="background">
     
@@ -27,7 +27,7 @@
             </VBox>
         </HBox>
         <Button text="Login" onAction="#handleLogin" />
-        <Button text="Sign up" onAction="#handleLogin"/>
+        <Button text="Sign up" fx:id="signUpButton" onAction="#handleSignUpScene"/>
         <Button text="Forgot passwords" onAction="#handleLogin"/>
         <Label fx:id="messageLabel" text="" styleClass="error-label"/>
     </VBox>

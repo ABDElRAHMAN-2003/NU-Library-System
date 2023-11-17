@@ -6,29 +6,27 @@
 
 <GridPane 
     fx:id="gridPane" 
-    xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" stylesheets="login.css"
-    fx:controller="com.example.Login_Controller"
-    alignment="center" hgap="10" vgap="10"
-    styleClass="background">
+    xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" stylesheets="signup.css"
+    fx:controller="com.example.signup_Controller" alignment="center" hgap="10" vgap="10" styleClass="background">
     
     <VBox spacing="5" styleClass="vbox">
         <ImageView>
             <Image url="NUlogo.png" />
         </ImageView>
-        <Label text="Login" styleClass="title-label"/>
+        <Label text="Sign Up" styleClass="title-label"/> 
         <HBox styleClass="hbox">
             <VBox>
                 <Label text="Email:" styleClass="field-label"/>
                 <Label text="Password:" styleClass="field-label"/>
+                <Label text="Phone Number:" styleClass="field-label"/> 
             </VBox>
             <VBox style="-fx-pref-width: 250px;">
                 <TextField fx:id="emailField" promptText="Enter your email" styleClass="field"/>
                 <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="field"/>
+                <TextField fx:id="phoneField" promptText="Enter your phone number" styleClass="field"/> 
             </VBox>
         </HBox>
-        <Button text="Login" onAction="#handleLogin" />
-        <Button text="Sign up" fx:id="signUpButton" onAction="#handleSignUpScene"/>
-        <Button text="Forgot passwords" onAction="#handleLogin"/>
+        <Button text="Sign Up" onAction="#handleSignUp"/> 
         <Label fx:id="messageLabel" text="" styleClass="error-label"/>
     </VBox>
 </GridPane>
