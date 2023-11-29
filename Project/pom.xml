@@ -31,11 +31,22 @@
             <version>2.0.7</version> 
         </dependency>
 
-        
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.activation</groupId>
+            <artifactId>activation</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.4.11</version> 
+            <version>1.4.12</version> 
         </dependency>
 
 
@@ -76,7 +87,7 @@
                         <!-- Usage: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.Login</mainClass>
+                            <mainClass>com.example.login</mainClass>
                         </configuration>
                     </execution>
                 </executions>
