@@ -27,7 +27,7 @@
             </VBox>
         </HBox>
         <Button text="Login" onAction="#handleLogin" />
-        <Button text="Sign up" fx:id="signUpButton" onAction="#handleSignUpScene"/>
+        <Button text="Sign up" onAction="#handleSignUpScene"/>
         <Button text="Forgot passwords" onAction="#handleLogin"/>
         <Label fx:id="messageLabel" text="" styleClass="error-label"/>
     </VBox>
