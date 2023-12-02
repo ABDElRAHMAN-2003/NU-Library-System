@@ -1,28 +1,69 @@
 /* mainpage.css */
 
-.background {
-    -fx-background-image: url('MoodleBG.png');
+.navbar{
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0, 5);
+    -fx-alignment: center;
+}
+
+.background{
+    -fx-background-image: url('MainPageBG.png');
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
 }
-.vbox {
+
+.white-container{
     -fx-background-color: rgba(255, 255, 255, 0.95);
-    -fx-min-height: 800px;
-    -fx-pref-width: 200px;
-    -fx-alignment: TOP_CENTER; 
+    -fx-background-radius: 20px;
+    -fx-pref-height: 750px;
+    -fx-pref-width: 500px;
+    -fx-alignment: top-center;
+    -fx-spacing: 44px;
+    
+}
+
+.field-container{
+    -fx-alignment: center;
+    -fx-hgap: 18;
+    -fx-vgap: 9;
+    /* -fx-grid-lines-visible:true; */
+}
+ 
+
+
+.title-label {
+    -fx-font-size: 30px;
+    -fx-text-fill: rgb(19, 9, 106); /* Dark blue text color */
+    -fx-font-weight: bold;
+}
+
+.field-label{
+    -fx-font-size: 20px;
+    -fx-text-fill: #0C1D61;
+}
+
+.field{
+    -fx-pref-width: 250px; /* You can adjust the maximum width as needed */
+    -fx-background-radius: 10px;
+    -fx-font-size: 14px;
 }
 
 .button {
     -fx-font-size: 14px;
-    -fx-pref-height: 50px;
-    -fx-pref-width: 200px;
-    -fx-background-color: rgb(246, 246, 255);
-    -fx-text-fill: #000000;
-    /* -fx-border-color: #030303; Border color */
-    -fx-border-width: 2px; 
+    -fx-background-color: transparent;
 }
 
 .button:hover {
-    -fx-background-color: #0f336a;
-    -fx-text-fill: #f3efef;
+    -fx-background-color: #f2f2f2;
+}
+
+.button-pressed {
+    -fx-background-color: #f2f2f2; /* Change the background color */
+}
+
+.error-label2 {
+    -fx-text-fill: rgb(62, 72, 189);
+}
+.error-label {
+    -fx-text-fill: #ff0000;
 }

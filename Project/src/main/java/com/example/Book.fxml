@@ -8,6 +8,9 @@
     fx:controller="com.example.Mainpage_Controller">
 
     <center>
+        <HBox>
+            
+        </HBox>
         <GridPane 
             fx:id="gridPane"
             alignment="center" hgap="10" vgap="10"
@@ -19,15 +22,15 @@
     <top>
         <HBox styleClass="navbar">
 
-            <Region prefWidth="5"/>
+            <Region/>
             <!-- Image on the left -->
             <ImageView>
                 <Image url="NUlogo.png"/>
                 <fitWidth>83</fitWidth>
-                <fitHeight>67</fitHeight>
+                <fitHeight>62</fitHeight>
             </ImageView>
             
-            <Region prefWidth="10"/>
+            <Region prefWidth="50"/>
             <!-- Buttons on the left -->
             
                 <Button fx:id="ProfileButton" onAction="#handleProfileButton">
@@ -63,7 +66,7 @@
 
             <!-- Logout button on the far right -->
             <Button text="Logout" onAction="#handleLogoutButton"/>
-            <Region prefWidth="10"/>
+            <Region/>
         </HBox>
     </top>
 
