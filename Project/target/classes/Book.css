@@ -2,17 +2,28 @@
     -fx-alignment:top-center; 
     -fx-pref-height: 733px;
     -fx-pref-width: 1280px;
-    -fx-background-color: #FFFFFF
+    /* -fx-background-color: #ffffff */
 }
-
 .field{
-    -fx-background-color: #FFFFFF;
+    -fx-background-color: #f0f0f0;
     -fx-border-color: transparent;
     -fx-background-radius: 6;
-    -fx-pref-width: 200px;
+    -fx-pref-width: 400px;
+}
+.container{
+    -fx-hgap: 200;
+    -fx-vgap: 20;
 }
 
-.book-display{
+.books{
+    -fx-background-color:red;
+    -fx-pref-height: 300px;
+    -fx-pref-width: 250px;
+    -fx-background-radius: 6;
+}
+/* Book.css */
+
+.book-display {
     -fx-pref-height: 650px;
     -fx-pref-width: 1200px;
 }

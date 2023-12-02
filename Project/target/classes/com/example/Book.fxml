@@ -4,18 +4,17 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.image.*?>
 
-<GridPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"  fx:controller="com.example.BookController" stylesheets="Book.css" styleClass="screen">
+<GridPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.BookController"  stylesheets="Book.css" styleClass="screen">
 
         <VBox>
             <TextField fx:id="searchField" promptText="Search..." styleClass="field"/>
         </VBox>
         
-        <VBox>
-            <ScrollPane styleClass="book-display">
-                <VBox fx:id="scrollVBox" />
-            </ScrollPane>
-        </VBox>
-        
+        <ScrollPane styleClass = "book-display" >
+            <GridPane fx:id="innerGridPane" styleClass ="container">
+                <VBox fx:id="scrollVBox" styleClass="books"/>
+            </GridPane>
+        </ScrollPane>
 </GridPane>
 
 
