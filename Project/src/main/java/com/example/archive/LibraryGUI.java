@@ -1,4 +1,4 @@
-package com.example.admin;
+package com.example.archive;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -32,7 +32,7 @@ public class LibraryGUI extends Application {
 
 
         // ---------------------------------------------------------------------------------------------- //
-        // Capacity Window //
+        // Capacity Window  //
 
         Background background = new Background(new BackgroundImage(new Image("/bg.png"), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, BackgroundSize.DEFAULT));
 
