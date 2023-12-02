@@ -5,38 +5,47 @@
     -fx-background-size: cover;
 }
 
-.whiteContainer {
+.white-container{
     -fx-background-color: rgba(255, 255, 255, 0.95);
     -fx-background-radius: 20px;
     -fx-pref-height: 750px;
     -fx-pref-width: 500px;
     -fx-alignment: top-center;
+    -fx-spacing: 44px;
+    
 }
 
 .field-container{
-    alignment="center" gridLinesVisible="true"
-    -fx-hgap: 1; /* Adjust the horizontal gap value as needed */
-    -fx-vgap: 1;
-
+    -fx-alignment: center;
+    -fx-hgap: 18;
+    -fx-vgap: 9;
+    /* -fx-grid-lines-visible:true; */
 }
+ 
+
 
 .title-label {
     -fx-font-size: 30px;
     -fx-text-fill: rgb(19, 9, 106); /* Dark blue text color */
+    -fx-font-weight: bold;
 }
 
 .field-label{
-    -fx-font-size: 16px;
+    -fx-font-size: 20px;
+    -fx-text-fill: #0C1D61;
 }
 
 .field{
-    -fx-max-width: 250px;
+    -fx-pref-width: 250px; /* You can adjust the maximum width as needed */
+    -fx-background-radius: 10px;
+    -fx-font-size: 14px;
 }
 
 .button {
     -fx-font-size: 14px;
     -fx-pref-height: 30px;
     -fx-background-color: rgb(19, 9, 106);
+    -fx-background-radius: 10px;
     -fx-text-fill: #ffffff;
 }
 

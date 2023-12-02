@@ -11,25 +11,34 @@
     alignment="center" hgap="10" vgap="10"
     styleClass="background">
     
-    <VBox styleClass="whiteContainer" spacing="15">
-    
+    <VBox styleClass="white-container">
+
+        <Region/> <!--Spacer-->
+
         <ImageView>
             <Image url="NUlogo.png"/>
         </ImageView>
 
         <Label text="Login" styleClass="title-label"/>
 
-        <GridPane alignment="center" gridLinesVisible="true">
-            <Label text="Email:" styleClass="field-label" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-            <Label text="Password:" styleClass="field-label" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <GridPane styleClass="field-container" >
+            <Label text="Email:" styleClass="field-label"  GridPane.rowIndex="0" GridPane.columnIndex="0"/>
 
-            <TextField fx:id="emailField" promptText="Enter your email" styleClass="field" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
-            <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="field" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
-            <!-- <HyperLink text="Forgot password ?" onAction="#handleLogin" GridPane.columnIndex="3" GridPane.rowIndex="3"/> -->
-            <Label fx:id="messageLabel" text="" styleClass="error-label"/>
+            <VBox GridPane.rowIndex="2" GridPane.columnIndex="0">
+                <Label text="Password:" styleClass="field-label"/>
+            </VBox>
+
+            <TextField fx:id="emailField" promptText="Enter your email" styleClass="field" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+            <VBox GridPane.rowIndex="2" GridPane.columnIndex="3" >
+                <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="field"/>
+                <Hyperlink text="Forgot Password?" style="-fx-font-size: 11px;"/>
+            </VBox>
+            
         </GridPane>
 
         <Button text="Login" onAction="#handleLogin"/>
         <Button text="Sign up" onAction="#handleSignUpScene"/>
+        <Label fx:id="messageLabel" text="" styleClass="error-label"/>
     </VBox>
 </GridPane>

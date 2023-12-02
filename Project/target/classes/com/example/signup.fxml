@@ -7,36 +7,42 @@
 <GridPane 
     fx:id="gridPane" 
     xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" stylesheets="signup.css"
-    fx:controller="com.example.signup_Controller" alignment="center" gridLinesVisible="false" hgap="10" vgap="10" styleClass="background">
+    fx:controller="com.example.signup_Controller" alignment="center" hgap="10" vgap="10" styleClass="background">
     
-    <VBox styleClass="whiteContainer">
+    <VBox styleClass="white-container">
+
+        <Region prefHeight="66" /> <!--Spacer-->
+
         <ImageView>
             <Image url="NUlogo.png" />
         </ImageView>
+
         <Label text="Sign Up" styleClass="title-label"/>
-        <GridPane styleClass="whiteContainer2" gridLinesVisible="false">
+
+        <GridPane styleClass="field-container" gridLinesVisible="false">
             <!--Labels-->
-            <Label text="Email:" styleClass="field-label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
-            <Label text="First Name:" styleClass="field-label" GridPane.rowIndex="3" GridPane.columnIndex="5"/>
-            <Label text="Password:" styleClass="field-label" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
-            <Label text="Last Name:" styleClass="field-label" GridPane.rowIndex="5" GridPane.columnIndex="5"/>
-            <Label text="Phone Number:" styleClass="field-label" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
-            <Label text="Confirm Password:" styleClass="field-label" GridPane.rowIndex="7" GridPane.columnIndex="5"/> 
+            <Label text="Email:" styleClass="field-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <Label text="First Name:" styleClass="field-label" GridPane.rowIndex="0" GridPane.columnIndex="5"/>
+            <Label text="Password:" styleClass="field-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <Label text="Last Name:" styleClass="field-label" GridPane.rowIndex="2" GridPane.columnIndex="5"/>
+            <Label text="Confirm Password:" styleClass="field-label" GridPane.rowIndex="4" GridPane.columnIndex="0"/> 
+            <Label text="Phone Number:" styleClass="field-label" GridPane.rowIndex="4" GridPane.columnIndex="5"/>
+           
 
             <!--TextFields-->
-            <TextField fx:id="emailField" promptText="Enter your email" styleClass="field" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
-            <TextField fx:id="FirstName" promptText="Enter your first name" styleClass="field" GridPane.rowIndex="3" GridPane.columnIndex="6"/>
-            <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="field" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
-            <TextField fx:id="LastName" promptText="Enter your last" styleClass="field" GridPane.rowIndex="5" GridPane.columnIndex="6"/>
-            <TextField fx:id="phoneField" promptText="Enter your phone number" styleClass="field" GridPane.rowIndex="7" GridPane.columnIndex="6"/> 
-            <TextField fx:id="confirmPassword" promptText="Confirm Password" styleClass="field" GridPane.rowIndex="7" GridPane.columnIndex="1"/> 
+            <TextField fx:id="emailField" promptText="Enter your email" styleClass="field" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <TextField fx:id="FirstName" promptText="Enter your first name" styleClass="field" GridPane.rowIndex="0" GridPane.columnIndex="6"/>
+            <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="field" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <TextField fx:id="LastName" promptText="Enter your last" styleClass="field" GridPane.rowIndex="2" GridPane.columnIndex="6"/>
+            <TextField fx:id="confirmPassword" promptText="Confirm Password" styleClass="field" GridPane.rowIndex="4" GridPane.columnIndex="1"/> 
+            <TextField fx:id="phoneField" promptText="Enter your phone number" styleClass="field" GridPane.rowIndex="4" GridPane.columnIndex="6"/> 
         </GridPane>
+
         <!--Button-->
-            <VBox spacing="30" style="-fx-alignment: center; -fx-margin: 0 0 10 0;" VBox.vgrow="ALWAYS">
-                <Button text="Sign Up" onAction="#handleSignUp"/>
-                <Button text="Sign In" onAction="#handleSignUp"/>
-                <Label fx:id="messageLabel" text="" styleClass="error-label2"/>
-            </VBox>
+        <Button text="Sign Up" onAction="#handleSignUp"/>
+        <Button text="Log In" onAction="#handleSignUp"/>
+        <Label fx:id="messageLabel" text="" styleClass="error-label2"/>
+        
             
     </VBox>
 </GridPane>

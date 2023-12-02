@@ -5,17 +5,19 @@
     -fx-background-size: cover;
 }
 
-.whiteContainer{
+.white-container{
     -fx-background-color: rgba(255, 255, 255, 0.95);
     -fx-background-radius: 20px;
     -fx-pref-height: 750px;
     -fx-pref-width: 850px;
-    -fx-alignment: center;  
+    -fx-alignment: top-center;
+    -fx-spacing: 44px;
 }
-.whiteContainer2{
+
+.field-container{
     -fx-alignment: center;
-    -fx-hgap: 20; /* Adjust the horizontal gap value as needed */
-    -fx-vgap: 20;
+    -fx-hgap: 18;
+    -fx-vgap: 18;
 }
  
 
@@ -23,19 +25,18 @@
 .title-label {
     -fx-font-size: 30px;
     -fx-text-fill: rgb(19, 9, 106); /* Dark blue text color */
+    -fx-font-weight: bold;
 }
 
 .field-label{
     -fx-font-size: 20px;
-    -fx-text-fill: #1563d8;
+    -fx-text-fill: #0C1D61;
 }
 
 .field {
-    -fx-max-width: 600px; /* You can adjust the maximum width as needed */
-    -fx-pref-height: 30px;
-    -fx-background-radius: 6px;
+    -fx-pref-width: 200px; /* You can adjust the maximum width as needed */
+    -fx-background-radius: 10px;
     -fx-font-size: 14px;
-    -fx-padding: 5px; /* Adjust the padding as needed for spacing within the field */
 }
 
 
@@ -43,6 +44,7 @@
     -fx-font-size: 14px;
     -fx-pref-height: 30px;
     -fx-background-color: rgb(19, 9, 106);
+    -fx-background-radius: 10px;
     -fx-text-fill: #ffffff;
 
 }
