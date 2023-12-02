@@ -34,7 +34,6 @@ public class Mainpage_Controller{
     @FXML
         private void handleProfileButton(ActionEvent event) {
             // Clear the existing content of the GridPane
-            gridPane.getChildren().clear();
             Button clickedButton = (Button) event.getSource();
             updateButtonStyles(clickedButton);
             loadContent("login.fxml");
@@ -49,11 +48,9 @@ public class Mainpage_Controller{
     @FXML
     private void handleBookButton(ActionEvent event) {
         // Clear the existing content of the GridPane
-        gridPane.getChildren().clear();
-        
         Button clickedButton = (Button) event.getSource();
         updateButtonStyles(clickedButton);
-        loadContent("signup.fxml");
+        loadContent("Book.fxml");
         
         // Add new content to the GridPane for the "Search" button action
         // You can create and add new nodes here to change the content
@@ -66,9 +63,9 @@ public class Mainpage_Controller{
     @FXML
     private void handleCalendarButton(ActionEvent event) {
         // Clear the existing content of the GridPane
-        gridPane.getChildren().clear();
         Button clickedButton = (Button) event.getSource();
         updateButtonStyles(clickedButton);
+        loadContent("signup.fxml");
         // Add new content to the GridPane for the "Calendar" button action
         // Example:
         // Label label = new Label("Calendar content");

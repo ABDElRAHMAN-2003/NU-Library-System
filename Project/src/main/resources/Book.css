@@ -1,0 +1,18 @@
+.screen{
+    -fx-alignment:top-center; 
+    -fx-pref-height: 733px;
+    -fx-pref-width: 1280px;
+    -fx-background-color: #FFFFFF
+}
+
+.field{
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: transparent;
+    -fx-background-radius: 6;
+    -fx-pref-width: 200px;
+}
+
+.book-display{
+    -fx-pref-height: 650px;
+    -fx-pref-width: 1200px;
+}
