@@ -5,16 +5,19 @@
     -fx-background-size: cover;
 }
 
-.vbox {
+.whiteContainer {
     -fx-background-color: rgba(255, 255, 255, 0.95);
     -fx-background-radius: 20px;
     -fx-pref-height: 750px;
     -fx-pref-width: 500px;
-    -fx-alignment: center;
+    -fx-alignment: top-center;
 }
 
-.hbox{
-    -fx-alignment: center;
+.field-container{
+    alignment="center" gridLinesVisible="true"
+    -fx-hgap: 1; /* Adjust the horizontal gap value as needed */
+    -fx-vgap: 1;
+
 }
 
 .title-label {

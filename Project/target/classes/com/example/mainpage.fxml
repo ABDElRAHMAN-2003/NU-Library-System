@@ -8,7 +8,6 @@
     fx:controller="com.example.Mainpage_Controller" styleClass="background">
 
     <VBox spacing="5" styleClass="vbox">
-
         <HBox styleClass="hbox">
             <VBox>
                  <Button text="Search"/>

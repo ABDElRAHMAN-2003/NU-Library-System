@@ -11,24 +11,25 @@
     alignment="center" hgap="10" vgap="10"
     styleClass="background">
     
-    <VBox spacing="5" styleClass="vbox">
+    <VBox styleClass="whiteContainer" spacing="15">
+    
         <ImageView>
             <Image url="NUlogo.png"/>
         </ImageView>
+
         <Label text="Login" styleClass="title-label"/>
-        <HBox styleClass="hbox">
-            <VBox>
-                <Label text="Email:" styleClass="field-label"/>
-                <Label text="Password:" styleClass="field-label"/>
-            </VBox>
-            <VBox style="-fx-pref-width: 250px;">
-                <TextField fx:id="emailField" promptText="Enter your email" styleClass="field"/>
-                <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="field"/>
-            </VBox>
-        </HBox>
-        <Button text="Login" onAction="#handleLogin" />
+
+        <GridPane alignment="center" gridLinesVisible="true">
+            <Label text="Email:" styleClass="field-label" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <Label text="Password:" styleClass="field-label" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+            <TextField fx:id="emailField" promptText="Enter your email" styleClass="field" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+            <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="field" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+            <!-- <HyperLink text="Forgot password ?" onAction="#handleLogin" GridPane.columnIndex="3" GridPane.rowIndex="3"/> -->
+            <Label fx:id="messageLabel" text="" styleClass="error-label"/>
+        </GridPane>
+
+        <Button text="Login" onAction="#handleLogin"/>
         <Button text="Sign up" onAction="#handleSignUpScene"/>
-        <Button text="Forgot passwords" onAction="#handleLogin"/>
-        <Label fx:id="messageLabel" text="" styleClass="error-label"/>
     </VBox>
 </GridPane>

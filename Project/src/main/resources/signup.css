@@ -5,20 +5,20 @@
     -fx-background-size: cover;
 }
 
-.whiteContainer {
+.whiteContainer{
     -fx-background-color: rgba(255, 255, 255, 0.95);
     -fx-background-radius: 20px;
     -fx-pref-height: 750px;
-    -fx-pref-width: 500px;
-    -fx-alignment: top-center;
+    -fx-pref-width: 850px;
+    -fx-alignment: center;  
 }
-
-.field-container{
-    alignment="center" gridLinesVisible="true"
-    -fx-hgap: 1; /* Adjust the horizontal gap value as needed */
-    -fx-vgap: 1;
-
+.whiteContainer2{
+    -fx-alignment: center;
+    -fx-hgap: 20; /* Adjust the horizontal gap value as needed */
+    -fx-vgap: 20;
 }
+ 
+
 
 .title-label {
     -fx-font-size: 30px;
@@ -26,18 +26,25 @@
 }
 
 .field-label{
-    -fx-font-size: 16px;
+    -fx-font-size: 20px;
+    -fx-text-fill: #1563d8;
 }
 
-.field{
-    -fx-max-width: 250px;
+.field {
+    -fx-max-width: 600px; /* You can adjust the maximum width as needed */
+    -fx-pref-height: 30px;
+    -fx-background-radius: 6px;
+    -fx-font-size: 14px;
+    -fx-padding: 5px; /* Adjust the padding as needed for spacing within the field */
 }
+
 
 .button {
     -fx-font-size: 14px;
     -fx-pref-height: 30px;
     -fx-background-color: rgb(19, 9, 106);
     -fx-text-fill: #ffffff;
+
 }
 
 .button:hover {
