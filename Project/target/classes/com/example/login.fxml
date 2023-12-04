@@ -37,8 +37,8 @@
             
         </GridPane>
 
-        <Button text="Login" onAction="#handleLogin"/>
-        <Button text="Sign up" onAction="#handleSignUpScene"/>
+        <Button text="Login" onAction="#handleLogin" styleClass="btn"/>
+        <Button text="Sign up" onAction="#handleSignUpScene" styleClass="btn"/>
         <Label fx:id="messageLabel" text="" styleClass="error-label"/>
     </VBox>
 </GridPane>

@@ -26,7 +26,7 @@ public class Mainpage_Controller{
     @FXML
     private void initialize() {
         // Simulate a click on the "Profile" button to set the initial content
-        loadContent("login.fxml");
+        loadContent("Book.fxml");
         updateButtonStyles(ProfileButton);
     }
     
@@ -75,11 +75,11 @@ public class Mainpage_Controller{
     private void updateButtonStyles(Button clickedButton) {
         // Remove the CSS class from the last pressed button
         if (lastPressedButton != null) {
-            lastPressedButton.getStyleClass().remove("button-pressed");
+            lastPressedButton.getStyleClass().remove("btn-pressed");
         }
 
         // Add the CSS class to the clicked button
-        clickedButton.getStyleClass().add("button-pressed");
+        clickedButton.getStyleClass().add("btn-pressed");
 
         // Update the lastPressedButton to the currently clicked button
         lastPressedButton = clickedButton;

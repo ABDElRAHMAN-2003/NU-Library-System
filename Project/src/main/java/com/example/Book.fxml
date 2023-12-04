@@ -4,18 +4,30 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.image.*?>
 
-<GridPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.BookController"  stylesheets="Book.css" styleClass="screen">
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.BookController" stylesheets="Book.css">
 
-        <VBox>
+    <top>
+        <HBox styleClass="search-box">
             <TextField fx:id="searchField" promptText="Search..." styleClass="field"/>
-        </VBox>
-        
-        <ScrollPane styleClass = "book-display" >
-            <GridPane fx:id="innerGridPane" styleClass ="container">
-                <VBox fx:id="scrollVBox" styleClass="books"/>
-            </GridPane>
+            <Button text="" styleClass="search-button">
+                <graphic>
+                    <ImageView>
+                        <!-- Provide the image file path -->
+                        <Image url="SearchIcon.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane styleClass="book-display">
+                <GridPane fx:id="innerGridPane" styleClass ="container">
+                    <VBox fx:id="scrollVBox" styleClass="books"/>
+                </GridPane>
         </ScrollPane>
-</GridPane>
+    </center>
+</BorderPane>
 
 
 

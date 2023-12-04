@@ -39,7 +39,7 @@
 }
 
 
-.button {
+.btn {
     -fx-font-size: 14px;
     -fx-pref-height: 30px;
     -fx-background-color: rgb(19, 9, 106);
@@ -48,7 +48,7 @@
 
 }
 
-.button:hover {
+.btn:hover {
     -fx-background-color: #001c47;
 }
 

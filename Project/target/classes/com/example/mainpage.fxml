@@ -33,7 +33,7 @@
             <Region prefWidth="10"/>
             <!-- Buttons on the left -->
             
-                <Button fx:id="ProfileButton" onAction="#handleProfileButton">
+                <Button fx:id="ProfileButton" onAction="#handleProfileButton" styleClass="btn">
                     <graphic>
                         <ImageView>
                             <!-- Provide the image file path -->
@@ -42,7 +42,7 @@
                     </graphic>
                 </Button>
 
-                <Button onAction="#handleBookButton">
+                <Button onAction="#handleBookButton" styleClass="btn">
                     <graphic>
                         <ImageView>
                             <!-- Provide the image file path -->
@@ -51,7 +51,7 @@
                     </graphic>
                 </Button>
 
-                <Button onAction="#handleCalendarButton">
+                <Button onAction="#handleCalendarButton" styleClass="btn">
                     <graphic>
                         <ImageView>
                             <!-- Provide the image file path -->
@@ -65,7 +65,7 @@
             <Region HBox.hgrow="ALWAYS" />
 
             <!-- Logout button on the far right -->
-            <Button text="Logout" onAction="#handleLogoutButton"/>
+            <Button text="Logout" onAction="#handleLogoutButton" styleClass="btn"/>
             <Region prefWidth="10"/>
         </HBox>
     </top>

@@ -10,6 +10,9 @@
     -fx-background-image: url('MainPageBG.png');
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
+    -fx-border-color: black;
+    -fx-pref-height: 733px;
+    -fx-pref-width: 1280px;
 }
 
 .white-container{
@@ -48,16 +51,16 @@
     -fx-font-size: 14px;
 }
 
-.button {
+.btn {
     -fx-font-size: 14px;
     -fx-background-color: transparent;
 }
 
-.button:hover {
+.btn:hover {
     -fx-background-color: #f2f2f2;
 }
 
-.button-pressed {
+.btn-pressed {
     -fx-background-color: #f2f2f2; /* Change the background color */
 }
 
