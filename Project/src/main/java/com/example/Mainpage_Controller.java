@@ -65,7 +65,7 @@ public class Mainpage_Controller{
         // Clear the existing content of the GridPane
         Button clickedButton = (Button) event.getSource();
         updateButtonStyles(clickedButton);
-        loadContent("signup.fxml");
+        loadContent("Calendar.fxml");
         // Add new content to the GridPane for the "Calendar" button action
         // Example:
         // Label label = new Label("Calendar content");

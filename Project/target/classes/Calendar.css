@@ -1,0 +1,49 @@
+/* Calendar.css */
+
+/* Apply a background color to the entire calendar */
+#calendar {
+    -fx-background-color: #f0f0f0;
+}
+
+/* Style the header area containing Previous, Month Label, and Next buttons */
+.header-label {
+    -fx-font-size: 18;
+}
+
+/* Style the GridPane containing calendar cells */
+#calendarGrid {
+    -fx-background-color: #ffffff;
+}
+
+/* Style the individual calendar cells */
+.calendar-cell {
+    -fx-padding: 10;
+    -fx-border-color: #d0d0d0;
+    -fx-border-width: 0.5;
+    -fx-background-color: #ffffff;
+}
+
+/* Highlight style for the current day cell */
+.current-day {
+    -fx-background-color: #8fd7e6;
+}
+
+/* Style for the buttons in the header */
+.button {
+    -fx-font-size: 14;
+    -fx-background-color: #4CAF50; /* Green */
+    -fx-text-fill: white;
+}
+
+/* Style for the labels in the header */
+.label {
+    -fx-font-size: 16;
+    -fx-text-fill: #333333;
+}
+
+/* Style for the previous and next buttons */
+#previousButton, #nextButton {
+    -fx-font-size: 14;
+    -fx-background-color: #008CBA; /* Blue */
+    -fx-text-fill: white;
+}
