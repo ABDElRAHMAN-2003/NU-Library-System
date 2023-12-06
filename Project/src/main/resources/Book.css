@@ -1,3 +1,13 @@
+/* Book.css */
+
+/*----------SearchBar----------*/
+.search-box{
+    -fx-alignment: center;
+    -fx-pref-width:800px;
+    -fx-spacing:10px;
+    -fx-padding: 0 0 10px 0;
+}
+
 .field{
     -fx-background-color: #f0f0f0;
     -fx-border-color: transparent;
@@ -5,15 +15,19 @@
     -fx-pref-width:850px;
 }
 
-.search-box{
-    -fx-alignment:"center";
-    -fx-pref-width:800px;
-    -fx-spacing:10px;
-}
-
 .search-button{
     -fx-background-color: #f0f0f0;
     -fx-background-radius: 40;
+}
+
+
+/*----------Books----------*/
+.book-display{
+    -fx-background-color:transparent;
+}
+
+.book-display>.viewport {  
+    -fx-background-color:transparent;
 }
 
 .container{
@@ -26,17 +40,8 @@
     -fx-pref-height: 300px;
     -fx-pref-width: 250px;
     -fx-background-radius: 6;
-}
-/* Book.css */
-
-.book-display>.viewport {
-    -fx-pref-height: 730px;
-    -fx-pref-width: 1200px;
-    -fx-background-color:transparent;
+    -fx-alignment: top-center;
+    -fx-spacing:10px;
 }
 
-.book-display{
-    -fx-pref-height: 730px;
-    -fx-pref-width: 1200px;
-    -fx-background-color:transparent;
-}
+

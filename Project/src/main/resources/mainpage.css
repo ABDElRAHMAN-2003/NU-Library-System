@@ -13,6 +13,10 @@
     -fx-border-color: black;
     -fx-pref-height: 733px;
     -fx-pref-width: 1280px;
+    -fx-alignment:center;
+    -fx-hgap:10px;
+    -fx-vgap:80px;
+    -fx-padding: 20px 0 0 0;
 }
 
 .white-container{

@@ -12,7 +12,6 @@
             <Button text="" styleClass="search-button">
                 <graphic>
                     <ImageView>
-                        <!-- Provide the image file path -->
                         <Image url="SearchIcon.png" />
                     </ImageView>
                 </graphic>
@@ -21,13 +20,10 @@
     </top>
 
     <center>
-        <ScrollPane styleClass="book-display">
+        <ScrollPane fx:id="scrollPane" styleClass="book-display" fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="NEVER">
                 <GridPane fx:id="innerGridPane" styleClass ="container">
-                    <VBox fx:id="scrollVBox" styleClass="books"/>
+                    
                 </GridPane>
         </ScrollPane>
     </center>
 </BorderPane>
-
-
-

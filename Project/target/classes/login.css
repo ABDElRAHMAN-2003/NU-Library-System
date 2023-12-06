@@ -3,6 +3,9 @@
     -fx-background-image: url('MoodleBG.png');
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
+    -fx-alignment:center;
+    -fx-hgap:10px;
+    -fx-vgap:10px;
 }
 
 .white-container{
