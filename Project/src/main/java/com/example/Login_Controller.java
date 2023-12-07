@@ -2,6 +2,10 @@ package com.example;
 
 import java.io.IOException;
 
+import com.mongodb.client.*;
+import com.mongodb.client.model.Filters;
+import org.bson.Document;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -50,18 +54,28 @@ public class Login_Controller {
     private void handleLogin(ActionEvent event) throws IOException {
         String email = emailField.getText();
         String password = passwordField.getText();
-
+    
+        MongoClient mongoClient;
+        MongoDatabase database;
+        MongoCollection<Document> collection;
+    
+        mongoClient = MongoClients.create("mongodb+srv://Maqdi:h8HVOmAJeVTEMmKd@nulibrarysystem.9c6hrww.mongodb.net/?retryWrites=true&w=majority");
+        database = mongoClient.getDatabase("NULibrary");
+        collection = database.getCollection("Users");
+    
         // Perform login validation here (check email and password)
-
-        if ("admin".equals(email) && "admin".equals(password)) {
-            // messageLabel.setText("Login successful!");
+        Document query = new Document("email", email).append("password", password);
+        Document adminDocument = collection.find(query).first();
+    
+        if (adminDocument != null) {
+            // Login successful
             mainPage(event);
-
-            
+            System.out.println("DONE");
         } else {
             messageLabel.setText("Invalid email or password. Please try again.");
         }
     }
+    
 
     @FXML
     private void handleSignUpScene (ActionEvent event) throws IOException {

@@ -9,9 +9,7 @@ public class Student {
     private String phoneNumber;
     private String email;
 
-    public Student(String id, String studentname, String password, String firstName, String lastName, String phoneNumber, String email) {
-        this.id = id;
-        this.studentname = studentname;
+    public Student(String email, String password, String firstName, String lastName, String phoneNumber) {
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;

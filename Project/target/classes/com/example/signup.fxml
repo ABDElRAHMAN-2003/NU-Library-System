@@ -34,13 +34,13 @@
             <TextField fx:id="FirstName" promptText="Enter your first name" styleClass="field" GridPane.rowIndex="0" GridPane.columnIndex="6"/>
             <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="field" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
             <TextField fx:id="LastName" promptText="Enter your last" styleClass="field" GridPane.rowIndex="2" GridPane.columnIndex="6"/>
-            <TextField fx:id="confirmPassword" promptText="Confirm Password" styleClass="field" GridPane.rowIndex="4" GridPane.columnIndex="1"/> 
+            <PasswordField fx:id="confirmPassword" promptText="Confirm Password" styleClass="field" GridPane.rowIndex="4" GridPane.columnIndex="1"/> 
             <TextField fx:id="phoneField" promptText="Enter your phone number" styleClass="field" GridPane.rowIndex="4" GridPane.columnIndex="6"/> 
         </GridPane>
 
         <!--Button-->
         <Button text="Sign Up" onAction="#handleSignUp" styleClass="btn"/>
-        <Button text="Log In" onAction="#handleSignUp" styleClass="btn"/>
+        <Button text="Log In" onAction="#handleSignin" styleClass="btn"/>
         <Label fx:id="messageLabel" text="" styleClass="error-label2"/>
         
             

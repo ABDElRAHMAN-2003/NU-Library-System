@@ -5,8 +5,8 @@ import com.mongodb.client.model.Filters;
 import org.bson.Document;
 
 public class MongoDBConnector {
-    private static final String DATABASE_NAME = "Library";
-    private static final String Student_collection = "Student";
+    private static final String DATABASE_NAME = "NULibrary";
+    private static final String Student_collection = "Users";
 
     private MongoClient mongoClient;
     private MongoDatabase database;
@@ -17,40 +17,37 @@ public class MongoDBConnector {
         mongoClient = MongoClients.create("mongodb+srv://Maqdi:h8HVOmAJeVTEMmKd@nulibrarysystem.9c6hrww.mongodb.net/?retryWrites=true&w=majority");
         database = mongoClient.getDatabase(DATABASE_NAME);
     }
-
+    
     public void insertStudent(Student Student) {
 
         collection = database.getCollection(Student_collection);
 
-        Document StudentDocument = new Document("studentname", Student.getstudentname())
+        Document StudentDocument = new Document("email", Student.getEmail())
                 .append("password", Student.getPassword())
                 .append("firstName", Student.getFirstName())  
                 .append("lastName", Student.getLastName())
-                .append("phoneNumber", Student.getPhoneNumber())
-                .append("email", Student.getEmail())
-                .append("id", Student.getId());
+                .append("phoneNumber", Student.getPhoneNumber());
 
         // Insert the document into the collection
         collection.insertOne(StudentDocument);
     }
 
-
+    
     public Student findStudentBystudentname(String email) {
         collection = database.getCollection(Student_collection);
         // Find the Student document by email
         Document StudentDocument = collection.find(Filters.eq("email", email)).first();
     
-        if (StudentDocument != null) {
-            return new Student(
-                    StudentDocument.getString("id"),
-                    StudentDocument.getString("studentname"),
-                    StudentDocument.getString("password"),
-                    StudentDocument.getString("firstName"),
-                    StudentDocument.getString("lastName"),
-                    StudentDocument.getString("phoneNumber"),
-                    StudentDocument.getString("email")
-            );
-        }
+        // if (StudentDocument != null) {
+        //     return new Student(
+        //             StudentDocument.getString("studentname"),
+        //             StudentDocument.getString("password"),
+        //             StudentDocument.getString("firstName"),
+        //             StudentDocument.getString("lastName"),
+        //             StudentDocument.getString("phoneNumber"),
+        //             StudentDocument.getString("email")
+        //     );
+        // }
     
         return null; // Student not found
     }
