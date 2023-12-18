@@ -10,13 +10,26 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.Month;
 import java.time.ZonedDateTime;
-import java.util.*;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+import org.bson.Document;
+
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
+import com.mongodb.client.MongoDatabase;
 
 public class CalendarController implements Initializable {
 
-    ZonedDateTime dateFocus;
-    ZonedDateTime today;
+    private ZonedDateTime dateFocus;
+    private ZonedDateTime today;
 
     @FXML
     private Text year;
@@ -68,8 +81,8 @@ public class CalendarController implements Initializable {
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
                 StackPane stackPane = new StackPane();
-
                 Rectangle rectangle = new Rectangle();
+
                 rectangle.setFill(Color.TRANSPARENT);
                 rectangle.setStroke(Color.BLACK);
                 rectangle.setStrokeWidth(strokeWidth);
@@ -93,7 +106,48 @@ public class CalendarController implements Initializable {
                     }
                 }
                 calendar.getChildren().add(stackPane);
+                
             }
         }
+
+        // MongoDB integration
+        // try (MongoClient mongoClient = MongoClients.create("mongodb+srv://Maqdi:h8HVOmAJeVTEMmKd@nulibrarysystem.9c6hrww.mongodb.net/?retryWrites=true&w=majority")) {
+        //     MongoDatabase database = mongoClient.getDatabase("NULibrary");
+        //     MongoCollection<Document> collection = database.getCollection("Books");
+
+        //     // Fetch books from MongoDB
+        //     MongoCursor<Document> cursor = collection.find().iterator();
+        //     try {
+        //         while (cursor.hasNext()) {
+        //             Document bookDocument = cursor.next();
+        //             String bookDueDate = bookDocument.getString("dueDate");
+
+        //             if (bookDueDate != null && !bookDueDate.isEmpty()) {
+        //                 // Parse the due date string to a ZonedDateTime or another suitable date representation
+        //                 try {
+        //                     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM dd yyyy", Locale.ENGLISH);
+        //                     ZonedDateTime dueDateTime = ZonedDateTime.parse(bookDueDate, formatter);
+                        
+        //                     // Check if the book's due date corresponds to the current calendar date
+        //                     if (dueDateTime.getYear() == dateFocus.getYear() && dueDateTime.getMonth() == dateFocus.getMonth()) {
+        //                         int dueDay = dueDateTime.getDayOfMonth();
+        //                         String bookName = bookDocument.getString("title"); // Retrieve book name
+        //                         Text dueDateText = new Text("Due: " + dueDay + "\nBook: " + bookName);
+        //                         double textTranslationY = - (calendarHeight / 2) * 0.75;
+        //                         dueDateText.setTranslateY(textTranslationY + 20);
+        //                         StackPane stackPane = new StackPane();
+        //                         stackPane.getChildren().addAll(new Rectangle(), dueDateText);
+        //                         calendar.getChildren().add(stackPane);
+        //                     }
+        //                 } catch (DateTimeParseException e) {
+        //                     // Handle the case where parsing fails (e.g., due to invalid date format)
+        //                     System.err.println("Error parsing due date: " + bookDueDate);
+        //                 }
+        //             }
+        //         }
+        //     } finally {
+        //         cursor.close();
+        //     }
+        // }
     }
 }

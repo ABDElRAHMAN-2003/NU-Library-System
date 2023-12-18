@@ -109,10 +109,11 @@ public class BookController {
                 String description = doc.getString("description");
                 String coverImageUrl = doc.getString("coverImageUrl");
                 int remainingBooks = doc.getInteger("remainingBooks", 0);
+                String duedate = doc.getString("DueDate");
                 
                 System.out.println(title);
                 // Create a new Book object and add it to the list
-                books.add(new NewBook(title, description, coverImageUrl, remainingBooks));
+                books.add(new NewBook(title, description, coverImageUrl, remainingBooks,duedate));
             }
         } finally {
             // Close the client connection to free up resources

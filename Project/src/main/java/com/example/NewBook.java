@@ -4,14 +4,17 @@ public class NewBook {
     private String title;
     private String description;
     private String coverImageUrl;
+    private String duedate;
     private int remainingBooks;
 
     // Constructor to set initial values for book properties
-    public NewBook(String title, String description, String coverImageUrl, int remainingBooks) {
+    public NewBook(String title, String description, String coverImageUrl, int remainingBooks,String duedate) {
         this.title = title;
         this.description = description;
         this.coverImageUrl = coverImageUrl;
         this.remainingBooks = remainingBooks;
+        this.duedate=duedate;
+
     }
 
     // Getter for the title
@@ -32,6 +35,11 @@ public class NewBook {
     // Getter for the number of remaining books
     public int getRemainingBooks() {
         return remainingBooks;
+    }
+
+    public String getduedate(){
+        return duedate;
+
     }
 
     // Setter for the number of remaining books
