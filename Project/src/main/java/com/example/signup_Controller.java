@@ -81,9 +81,13 @@ public class signup_Controller {
         signUpStage.close();
     }
      // Perform input validation
-    private boolean isValidInput(String email,String Confirmpass, String password, String firstName, String lastName, String phone) {
-        // Add your validation logic here
-        return !email.isEmpty() && !password.isEmpty() && !firstName.isEmpty() && !lastName.isEmpty() && !phone.isEmpty()  && password.equals(Confirmpass) ; //&& confirmpass==password 
+     private boolean isValidInput(String email, String confirmpass, String password, String firstName, String lastName, String phone) {
+        return isValidEmail(email) && !password.isEmpty() && !firstName.isEmpty() && !lastName.isEmpty() && !phone.isEmpty() && password.equals(confirmpass);
+    }
+    private boolean isValidEmail(String email) {
+        String emailPattern = "\\d{4}@nu.edu.eg";
+        String lastCharacters = email.substring(email.length() - 14);
+        return !email.isEmpty() && lastCharacters.matches(emailPattern) && email.length()>=14;
     }
 
 }

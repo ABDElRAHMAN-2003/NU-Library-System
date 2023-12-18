@@ -67,7 +67,7 @@ public class Login_Controller {
         Document query = new Document("email", email).append("password", password);
         Document adminDocument = collection.find(query).first();
     
-        if (adminDocument != null) {
+        if (adminDocument != null) {//isValidEmail(email) to check if student then we will direct to student main-page
             // Login successful
             mainPage(event);
             System.out.println("DONE");
@@ -95,5 +95,8 @@ public class Login_Controller {
         // Handle signup logic here
     }
     
-    
+    private boolean isValidEmail(String email) {
+        String emailPattern = "\\d{4}@nu.edu.eg";
+        return !email.isEmpty() && email.matches(emailPattern);
+    }
 }
