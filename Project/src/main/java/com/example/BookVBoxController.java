@@ -15,6 +15,9 @@ public class BookVBoxController {
     
     @FXML
     private Label bookTitle, remainingBooksLabel;
+
+    @FXML
+    private Button descriptionButton, borrowButton;
     
     public void setBookImage(String imageUrl) {
         Image image = new Image(imageUrl);

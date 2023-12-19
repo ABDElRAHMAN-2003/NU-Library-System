@@ -58,8 +58,7 @@
                         </ImageView>
                     </graphic>
                 </Button>
-            
-
+                
             <!-- Spacer to push buttons to the left -->
             <Region HBox.hgrow="ALWAYS" />
 

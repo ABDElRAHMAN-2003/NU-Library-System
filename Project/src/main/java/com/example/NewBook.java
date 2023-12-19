@@ -7,6 +7,7 @@ public class NewBook {
     private String duedate;
     private int remainingBooks;
 
+
     // Constructor to set initial values for book properties
     public NewBook(String title, String description, String coverImageUrl, int remainingBooks,String duedate) {
         this.title = title;

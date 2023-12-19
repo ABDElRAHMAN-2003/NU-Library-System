@@ -33,11 +33,11 @@ public class signup_Controller {
     @FXML
     private Label messageLabel;
 
-
     private MongoDBConnector mongoConnector = new MongoDBConnector();
 
     @FXML
     private void handleSignUp(ActionEvent event) {
+
         String email = emailField.getText();
         String password = passwordField.getText();
         String Confirmpass= confirmPassword.getText();

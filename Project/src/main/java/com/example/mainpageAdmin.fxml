@@ -5,7 +5,7 @@
 <?import javafx.scene.image.*?>
 
 <BorderPane fx:id="BorderPane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" stylesheets="mainpage.css"
-    fx:controller="com.example.Mainpage_Controller">
+    fx:controller="com.example.MainpageAdmin_Controller">
 
     <center>
         <GridPane 
@@ -50,11 +50,11 @@
                     </graphic>
                 </Button>
 
-                <Button onAction="#handleCalendarButton" styleClass="btn">
+                <Button onAction="#handleUserButton" styleClass="btn">
                     <graphic>
                         <ImageView>
                             <!-- Provide the image file path -->
-                            <Image url="CalendarIcon.png" />
+                            <Image url="BooksIcon.png" />
                         </ImageView>
                     </graphic>
                 </Button>

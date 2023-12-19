@@ -50,6 +50,26 @@ public class Login_Controller {
         loginStage.close();
         // Handle signup logic here
     }
+
+    @FXML
+    
+    private void adminpage(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("mainpageAdmin.fxml"));
+        Parent root = loader.load();
+
+        Scene scene = new Scene(root, 1280, 800);
+
+        Stage signUpStage = new Stage(); // Create a new stage for the signup window
+        signUpStage.setScene(scene);
+        signUpStage.setTitle(" Main Page ");
+        signUpStage.show();
+
+        // Close the login stage
+        Stage loginStage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        loginStage.close();
+        // Handle signup logic here
+    }
+    
     @FXML
     private void handleLogin(ActionEvent event) throws IOException {
         String email = emailField.getText();
@@ -74,6 +94,15 @@ public class Login_Controller {
         } else {
             messageLabel.setText("Invalid email or password. Please try again.");
         }
+
+        if (adminDocument != null&&isValidAdmin(email)) {
+            // redirect to admin page 
+            adminpage(event);
+        }
+        else {
+            messageLabel.setText("Invalid email or password. Please try again.");
+        }
+
     }
     
 
@@ -95,8 +124,8 @@ public class Login_Controller {
         // Handle signup logic here
     }
     
-    private boolean isValidEmail(String email) {
-        String emailPattern = "\\d{4}@nu.edu.eg";
-        return !email.isEmpty() && email.matches(emailPattern);
+    private boolean isValidAdmin(String email) {
+        String emailPattern = "@admin";
+        return !email.isEmpty() && email.endsWith(emailPattern);
     }
 }

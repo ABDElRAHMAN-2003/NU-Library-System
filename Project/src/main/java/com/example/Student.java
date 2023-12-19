@@ -1,5 +1,7 @@
 package com.example;
 
+import java.util.List;
+
 public class Student {
     private String id;
     private String studentname;
@@ -8,6 +10,7 @@ public class Student {
     private String lastName;
     private String phoneNumber;
     private String email;
+    private List<NewBook> borrowedBooks;  // to embed the borrowed books to each student 
 
     public Student(String email, String password, String firstName, String lastName, String phoneNumber) {
         this.password = password;
