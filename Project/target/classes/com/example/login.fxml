@@ -23,9 +23,7 @@
         <GridPane styleClass="field-container" >
             <Label text="Email:" styleClass="field-label"  GridPane.rowIndex="0" GridPane.columnIndex="0"/>
 
-            <VBox GridPane.rowIndex="2" GridPane.columnIndex="0">
-                <Label text="Password:" styleClass="field-label"/>
-            </VBox>
+            <Label text="Password:" styleClass="field-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
 
             <TextField fx:id="emailField" promptText="Enter your email" styleClass="field" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
 

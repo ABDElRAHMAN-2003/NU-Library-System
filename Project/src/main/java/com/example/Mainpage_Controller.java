@@ -26,7 +26,7 @@ public class Mainpage_Controller{
     @FXML
     private void initialize() {
         // Simulate a click on the "Profile" button to set the initial content
-        loadContent("Book.fxml");
+        loadContent("Profile.fxml");
         updateButtonStyles(ProfileButton);
     }
     
@@ -36,7 +36,7 @@ public class Mainpage_Controller{
             // Clear the existing content of the GridPane
             Button clickedButton = (Button) event.getSource();
             updateButtonStyles(clickedButton);
-            loadContent("login.fxml");
+            loadContent("Profile.fxml");
             // Add new content to the GridPane for the "Profile" button action
             // Example:
             // Label label = new Label("Profile content");

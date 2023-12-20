@@ -1,0 +1,32 @@
+.white-container{
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-radius: 50px;
+    -fx-pref-height: 450px;
+    -fx-pref-width: 750px;
+    -fx-alignment: center;
+}
+
+.User-label{
+    -fx-font-size: 25px;
+    -fx-text-fill: black; /* Dark blue text color */
+    -fx-font-weight: bold;
+}
+
+.field-container{
+    -fx-alignment: center;
+    -fx-hgap: 90;
+    -fx-vgap: 9;
+    /* -fx-grid-lines-visible:true; */
+}
+
+.label-title{
+    -fx-font-size: 20px;
+    -fx-text-fill: #0C1D61;
+    -fx-font-weight: bold;
+}
+
+.label-data{
+    -fx-font-size: 15px;
+    -fx-text-fill: rgb(19, 9, 106);
+    -fx-border-color: transparent;
+}

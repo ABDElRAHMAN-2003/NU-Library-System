@@ -6,6 +6,7 @@ import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import com.opencsv.exceptions.CsvValidationException;
 
+import io.github.cdimascio.dotenv.Dotenv;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -93,9 +94,9 @@ public class BookController {
         List<NewBook> books = new ArrayList<>();
         MongoClient mongoClient = null;
         
-        try {
+        try { 
             // Connect to the MongoDB server (assumes MongoDB is running on localhost on default port 27017)
-            mongoClient = MongoClients.create("mongodb+srv://Ali:suy4C1XDn5fHQOyd@nulibrarysystem.9c6hrww.mongodb.net/?retryWrites=true&w=majority");
+            mongoClient = MongoClients.create(Dotenv.load().get("MONGODB"));
 
             // Access the database
             MongoDatabase database = mongoClient.getDatabase("NULibrary");

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.Profile_Controller" stylesheets="profile.css">
+
+    <top>
+        <VBox styleClass="white-container">
+
+            <ImageView>
+                <Image url="ProfilePic.png"/>
+            </ImageView>
+
+            <Label text="User Name" styleClass="User-label"/>
+
+            <GridPane styleClass="field-container" >
+                <Label text="Email" styleClass="label-title" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+
+                <Hyperlink text="E.Example1234@nu.edu.eg" styleClass="label-data" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+
+                <Label text="Phone Number" styleClass="label-title" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+                <Hyperlink text="+201234567890" styleClass="label-data" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+            </GridPane>
+
+        </VBox>
+    </top>
+
+
+
+    <center>
+    <Region prefHeight="500"/>
+    </center>
+
+</BorderPane>
