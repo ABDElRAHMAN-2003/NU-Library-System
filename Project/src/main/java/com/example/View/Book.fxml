@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.Controllers.BookController" stylesheets="Book.css">
+
+    <top>
+        <HBox styleClass="search-box">
+            <TextField fx:id="searchField" promptText="Search..." styleClass="field"/>
+            <Button text="" styleClass="search-button">
+                <graphic>
+                    <ImageView>
+                        <Image url="SearchIcon.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fx:id="scrollPane" styleClass="book-display" fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="NEVER">
+                <GridPane fx:id="innerGridPane" styleClass ="container">
+                    
+                </GridPane>
+        </ScrollPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<GridPane 
+    fx:id="gridPane" 
+    xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" stylesheets="signup.css"
+    fx:controller="com.example.Controllers.signup_Controller" alignment="center" hgap="10" vgap="10" styleClass="background">
+    
+    <VBox styleClass="white-container">
+
+        <Region prefHeight="66" /> <!--Spacer-->
+
+        <ImageView>
+            <Image url="NUlogo.png" />
+        </ImageView>
+
+        <Label text="Sign Up" styleClass="title-label"/>
+
+        <GridPane styleClass="field-container" gridLinesVisible="false">
+            <!--Labels-->
+            <Label text="Email:" styleClass="field-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <Label text="First Name:" styleClass="field-label" GridPane.rowIndex="0" GridPane.columnIndex="5"/>
+            <Label text="Password:" styleClass="field-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <Label text="Last Name:" styleClass="field-label" GridPane.rowIndex="2" GridPane.columnIndex="5"/>
+            <Label text="Confirm Password:" styleClass="field-label" GridPane.rowIndex="4" GridPane.columnIndex="0"/> 
+            <Label text="Phone Number:" styleClass="field-label" GridPane.rowIndex="4" GridPane.columnIndex="5"/>
+           
+
+            <!--TextFields-->
+            <TextField fx:id="emailField" promptText="Enter your email" styleClass="field" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <TextField fx:id="FirstName" promptText="Enter your first name" styleClass="field" GridPane.rowIndex="0" GridPane.columnIndex="6"/>
+            <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="field" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <TextField fx:id="LastName" promptText="Enter your last" styleClass="field" GridPane.rowIndex="2" GridPane.columnIndex="6"/>
+            <PasswordField fx:id="confirmPassword" promptText="Confirm Password" styleClass="field" GridPane.rowIndex="4" GridPane.columnIndex="1"/> 
+            <TextField fx:id="phoneField" promptText="Enter your phone number" styleClass="field" GridPane.rowIndex="4" GridPane.columnIndex="6"/> 
+        </GridPane>
+
+        <!--Button-->
+        <Button text="Sign Up" onAction="#handleSignUp" styleClass="btn"/>
+        <Button text="Log In" onAction="#handleSignin" styleClass="btn"/>
+        <Label fx:id="messageLabel" text="" styleClass="error-label2"/>
+        
+            
+    </VBox>
+</GridPane>
+
