@@ -20,8 +20,12 @@ public class BookVBoxController {
     private Button descriptionButton, borrowButton;
     
     public void setBookImage(String imageUrl) {
-        Image image = new Image(imageUrl);
-        bookImage.setImage(image);
+        try {
+            Image image = new Image(getClass().getResourceAsStream(imageUrl));
+            bookImage.setImage(image);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     
     public void setBookTitle(String title) {

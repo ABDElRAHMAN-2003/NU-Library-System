@@ -13,25 +13,30 @@
                 <Image url="ProfilePic.png"/>
             </ImageView>
 
-            <Label text="User Name" styleClass="User-label"/>
+            <Label fx:id="userNameLabel" text="User Name" styleClass="User-label"/>
 
             <GridPane styleClass="field-container" >
                 <Label text="Email" styleClass="label-title" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
 
-                <Hyperlink text="E.Example1234@nu.edu.eg" styleClass="label-data" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <Hyperlink fx:id="emailHyperlink" text="None" styleClass="label-data" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
 
-                <Label text="Phone Number" styleClass="label-title" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+                <Label  text="Phone Number" styleClass="label-title" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
 
-                <Hyperlink text="+201234567890" styleClass="label-data" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+                <Hyperlink fx:id="phoneNumberHyperlink" text="None" styleClass="label-data" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
             </GridPane>
 
         </VBox>
     </top>
 
-
-
     <center>
-    <Region prefHeight="500"/>
+        <!-- Add a VBox to hold both Book and BooksVBox content -->
+        <VBox spacing="10">
+            <!-- Include Book.fxml content -->
+            <fx:include source="BookProfile.fxml"/>
+            
+            <!-- Include BooksVBox.fxml content -->
+            <!-- <fx:include source="BookVBox.fxml"/> -->
+        </VBox>
     </center>
 
 </BorderPane>

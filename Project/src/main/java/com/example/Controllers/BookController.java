@@ -71,7 +71,7 @@ public class BookController {
         for (int i = 0; i < books.size(); i++) {
             try {
                 NewBook book = books.get(i);
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("BookVBox.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/View/BookVBox.fxml"));
 
                 // Load the book FXML and get the controller
                 VBox bookVBox = loader.load();

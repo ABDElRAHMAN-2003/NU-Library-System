@@ -1,5 +1,8 @@
 package com.example.Controllers;
 
+import com.example.Controllers.UserManager;
+import com.example.Models.Student;
+
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
@@ -13,7 +16,9 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 
+
 public class Mainpage_Controller{
+    Student active_Student =UserManager.getInstance().getActiveStudent();
 
     @FXML
     private Button ProfileButton;
@@ -39,7 +44,9 @@ public class Mainpage_Controller{
             loadContent("/com/example/View/Profile.fxml");
             // Add new content to the GridPane for the "Profile" button action
             // Example:
+            
             // Label label = new Label("Profile content");
+            // System.out.println(active_Student);
             // gridPane.add(label, 0, 0);
         }
 

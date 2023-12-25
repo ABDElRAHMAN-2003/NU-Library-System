@@ -7,7 +7,7 @@
 <VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.Controllers.BookVBoxController" fx:id="scrollVBox" styleClass="books">
     
     <ImageView fx:id="bookImage">
-        <Image url="TempBook.png" /> 
+        <Image url="BooksIcon.png" /> 
     </ImageView>
     <Label fx:id="bookTitle" text="Can't Hurt Me" styleClass="book-title"/>
     <HBox alignment="CENTER" spacing="5">
