@@ -105,7 +105,20 @@ public class Mainpage_Controller{
 
 
     @FXML 
-    private void handleLogoutButton(){
-        gridPane.getChildren().clear();
+    private void handleLogoutButton(ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/View/login.fxml"));
+        Parent root = loader.load();
+
+        // Create a new scene
+        Scene scene = new Scene(root, 1280, 800);
+
+        // Create a new stage for the signin window
+        Stage LogInStage = new Stage();
+        LogInStage.setScene(scene);
+        LogInStage.show();
+
+        // Close the current stage (signup window)
+        Stage MainPageStage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        MainPageStage.close();
     }
 }

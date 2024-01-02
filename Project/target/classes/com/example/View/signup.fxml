@@ -5,9 +5,8 @@
 <?import javafx.scene.image.*?>
 
 <GridPane 
-    fx:id="gridPane" 
     xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" stylesheets="signup.css"
-    fx:controller="com.example.Controllers.signup_Controller" alignment="center" hgap="10" vgap="10" styleClass="background">
+    fx:controller="com.example.Controllers.signup_Controller" styleClass="background">
     
     <VBox styleClass="white-container">
 
@@ -15,6 +14,8 @@
 
         <ImageView>
             <Image url="NUlogo.png" />
+            <fitWidth>269</fitWidth>
+            <fitHeight>200</fitHeight>
         </ImageView>
 
         <Label text="Sign Up" styleClass="title-label"/>
@@ -35,12 +36,12 @@
             <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="field" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
             <TextField fx:id="LastName" promptText="Enter your last" styleClass="field" GridPane.rowIndex="2" GridPane.columnIndex="6"/>
             <PasswordField fx:id="confirmPassword" promptText="Confirm Password" styleClass="field" GridPane.rowIndex="4" GridPane.columnIndex="1"/> 
-            <TextField fx:id="phoneField" promptText="Enter your phone number" styleClass="field" GridPane.rowIndex="4" GridPane.columnIndex="6"/> 
+            <TextField fx:id="phoneField" promptText="Enter your phone number(Egyptian)" styleClass="field" GridPane.rowIndex="4" GridPane.columnIndex="6"/> 
         </GridPane>
 
         <!--Button-->
         <Button text="Sign Up" onAction="#handleSignUp" styleClass="btn"/>
-        <Button text="Log In" onAction="#handleSignin" styleClass="btn"/>
+        <Button text="Log In" onAction="#handleLogin" styleClass="btn"/>
         <Label fx:id="messageLabel" text="" styleClass="error-label2"/>
         
             

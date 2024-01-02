@@ -10,14 +10,15 @@ public class Student {
     private String lastName;
     private String phoneNumber;
     private String email;
-    private List<NewBook> borrowedBooks;  // to embed the borrowed books to each student 
+    private List<String> borrowedBooks;  // to embed the borrowed books to each student 
 
     public Student(String email, String password, String firstName, String lastName, String phoneNumber) {
+        this.email = email;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
-        this.email = email;
+ 
     }
 
     // Getters and setters for all attributes
@@ -35,7 +36,7 @@ public class Student {
     }
 
     public void setstudentname(String studentname) {
-        this.studentname = studentname;
+        this.studentname = firstName + " " + lastName;
     }
 
     public String getPassword() {

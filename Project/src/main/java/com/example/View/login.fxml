@@ -4,8 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.image.*?>
 
-<GridPane 
-    fx:id="gridPane" 
+<GridPane
     xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" stylesheets="login.css"
     fx:controller="com.example.Controllers.Login_Controller"
     styleClass="background">
@@ -16,6 +15,8 @@
 
         <ImageView>
             <Image url="NUlogo.png"/>
+            <fitWidth>269</fitWidth>
+            <fitHeight>200</fitHeight>
         </ImageView>
 
         <Label text="Login" styleClass="title-label"/>
